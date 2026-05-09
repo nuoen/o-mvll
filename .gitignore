@@ -14,6 +14,8 @@ build
 # clangd cache folder
 .cache
 
+*.env
+
 # python cache folders for tests
 __pycache__
 
@@ -24,3 +26,31 @@ tmp
 dist/omvll_ndk_r25c.so
 dist/omvll_xcode_14.dylib
 dist/Python-3.10.7
+
+# --- fork local additions ---
+
+# AI-assisted docs / personal learning notes (not upstreamed)
+CLAUDE.md
+learn.md
+learn.html
+image.png
+image-*.png
+
+# Editor / IDE / venv
+.vscode/
+.venv/
+.idea/
+
+# Lab build artifacts (.so 产物 + IDA 数据库)
+labs/**/*.so
+labs/**/*.id[0-9]
+labs/**/*.nam
+labs/**/*.til
+
+# O-MVLL 运行时产物
+omvll-logs/
+omvll-tmp/
+
+# 分发 tarball 与解包目录（几十 MB，不要放进 git）
+omvll_v1-6-0_*.tar.gz
+omvll_v1-6-0_*/
